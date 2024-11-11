@@ -121,16 +121,21 @@ class Frame:
 
 
 if __name__ == '__main__':
-    data_path= Path('/home/federico/Data/Human_motion_videos/Object_Detection')
+    data_path= Path('./example_dir')
 
     actions = ['drinking', 'eat_crisp', 'open_close_bottle', 'rubiks_cube', 'sanitise', 'touch_bottle', 'touch_rubiks_cube',
      'transport_bottle', 'transport_pen', 'transport_rubiks_cube']
     # f'{person_folder.name}_{action_folder.name}_{trial_fodler.name}'
+
+    # value in [0, 15]
     person=0
+    # every value in actions
     action='Drinking'
+    # 0 or 1
     trial=0
     if action.lower() not in actions:
         raise ValueError(f'Action {action.lower()} not recognized')
+    # build the file name e.g. 00_transport_pen_0.txt
     file_name = str(person).zfill(2)+'_'+action.lower()+'_' + f'{trial}.txt'
 
     aa = load_bboxes(data_path/file_name)

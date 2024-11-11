@@ -1,0 +1,1 @@
+Directory containign example data to run code on its own and see how it works.
