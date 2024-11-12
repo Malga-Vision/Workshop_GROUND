@@ -9,14 +9,13 @@ in the Left image show the action being performed with all the object detected a
 
 
 <p float="left">
-  <img src="./images/AnticipationInFrames.png" alt="alt text" title="image Title" height="150"/>
-  <img src="./images/45.jpeg" alt="alt text" title="image Title" height="150"/>
+  <img src="./images/AnticipationInFrames.png" alt="Anticipation Graph" title="Anticipation Graph" height="200"/>
+  <img src="./images/45.jpeg" alt="Transport Frame" title="Transport Frame" height="200"/>
 </p>
 
 [//]: # (<img src="./images/AnticipationInFrames.png" alt="alt text" title="image Title" height="450"/>)
 
 [//]: # (<img src="./images/45.jpeg" alt="alt text" title="image Title" height="450"/>)
-
 
 Folder Structure
 ```
