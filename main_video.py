@@ -15,6 +15,9 @@ save_dir=Path('/home/federico/Data/Human_motion_videos/Object_Detection/')
 # Open the video file
 videos_path = Path("/home/federico/Data/Human_motion_videos/output_videos/")
 video_path = Path("/home/federico/Videos/video.mp4")
+
+# # UNCOMMENT TO VISUALISE RESULTS
+# # Using the YOLO visulaliser implies to change the environemtal variable
 # cap = cv2.VideoCapture(video_path)
 #
 # # Loop through the video frames
@@ -42,6 +45,9 @@ video_path = Path("/home/federico/Videos/video.mp4")
 # # Release the video capture object and close the display window
 # cap.release()
 # cv2.destroyAllWindows()
+
+
+
 list_of_files=[]
 for person_folder in videos_path.iterdir():
     for action_folder in person_folder.iterdir():
@@ -59,10 +65,6 @@ for person_folder in videos_path.iterdir():
                 r.save_txt(txt_file=f'/home/federico/Downloads/Fede/{aa}.txt',save_conf=True)
                 with open(f'/home/federico/Downloads/Fede/{aa}.txt','a') as f:
                     f.writelines(f'{frame}\n')
-
-                # withlump(r.tojson(decimals=3), file)
-            # print('1')
-# print(results)
 
 
 with open(str(save_dir/'list_videos.txt'), 'w', newline='') as file:
