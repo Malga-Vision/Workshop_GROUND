@@ -3,6 +3,13 @@
 
 <p style="text-align:center;"><a href="https://doi.org/10.48550/arXiv.2408.05516">Link to Paper</a></p>
 
+Sketch of the idea: use the head direction to project the target point of view onto the table and asses its correctness as an anticipation cue.\
+In the Right image it is possivle to see a graphs showing when the gaze (projected head direction) reach the target point vs the hand reaching the same point.\
+in the Left image show the action being performed with all the object detected and the Head Pose drawn onto the frame.\
+<img src="./images/AnticipationInFrames.png" alt="alt text" title="image Title" height="450"/>
+<img src="./images/45.jpeg" alt="alt text" title="image Title" height="450"/>
+
+
 Folder Structure
 ```
 Workshop_GROUND/
@@ -39,8 +46,10 @@ is used and a running example can be found on Hugginface [demo](https://huggingf
 To reproduce the output graph the file `main_cv2.py` should be used. As the name suggests, the environment with _regular opencv_
 should be used for plotting.
 
-
-pip install ultralytics -> version 8.2.31
-uninstall opencv-python
+___
+How to install regular opencv after installing ultralytics:
+`pip install ultralytics -> version 8.2.31
+pip uninstall opencv-python
+pip install opencv-python`
 Using opencv-python-headless
 due to https://github.com/opencv/opencv-python/issues/386
