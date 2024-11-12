@@ -6,8 +6,16 @@
 Sketch of the idea: use the head direction to project the target point of view onto the table and asses its correctness as an anticipation cue.\
 In the Right image it is possivle to see a graphs showing when the gaze (projected head direction) reach the target point vs the hand reaching the same point.\
 in the Left image show the action being performed with all the object detected and the Head Pose drawn onto the frame.\
-<img src="./images/AnticipationInFrames.png" alt="alt text" title="image Title" height="450"/>
-<img src="./images/45.jpeg" alt="alt text" title="image Title" height="450"/>
+
+
+<p float="left">
+  <img src="./images/AnticipationInFrames.png" alt="alt text" title="image Title" height="150"/>
+  <img src="./images/45.jpeg" alt="alt text" title="image Title" height="150"/>
+</p>
+
+[//]: # (<img src="./images/AnticipationInFrames.png" alt="alt text" title="image Title" height="450"/>)
+
+[//]: # (<img src="./images/45.jpeg" alt="alt text" title="image Title" height="450"/>)
 
 
 Folder Structure
