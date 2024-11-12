@@ -17,6 +17,7 @@ videos_path = Path("/home/federico/Data/Human_motion_videos/output_videos/")
 video_path = Path("/home/federico/Videos/video.mp4")
 
 # # UNCOMMENT TO VISUALISE RESULTS
+# # Code from https://docs.ultralytics.com/modes/track/#how-can-i-visualize-object-tracks-over-multiple-video-frames-with-ultralytics-yolo
 # # Using the YOLO visulaliser implies to change the environemtal variable
 # cap = cv2.VideoCapture(video_path)
 #

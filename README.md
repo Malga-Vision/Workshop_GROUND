@@ -23,7 +23,12 @@ Workshop_GROUND/
 └── supervision_code.py
 ```
 
-There are two main environments to be used 
+There are two main environments to be used: one using `opencv-python-headless` (exported in `env_spec.py`) and the other the regular `opencv-python` (exported in `env_cv2_spec.py`).
+The one using the regular opencv allows to plot YOLO results on the fly through YOLO.
+
+Reference for YOLOv8 and Ultralytics python methods are here:
+- https://github.com/ultralytics/ultralytics
+- https://docs.ultralytics.com/reference/cfg/__init__/
 
 ``` main_video.py``` is the starting file to use YOLO in inference to extract bounding boxes and detections of objects.
 
