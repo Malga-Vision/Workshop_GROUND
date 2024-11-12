@@ -1,5 +1,5 @@
 # Code for GROUND Workshop 2024 - Accepted Poster
-## Proof of Concept in Anticipation using Head Direction Cues
+## Anticipation through Head Pose Estimation: a preliminary study
 
 <p style="text-align:center;"><a href="https://doi.org/10.48550/arXiv.2408.05516">Link to Paper</a></p>
 
@@ -30,7 +30,15 @@ Reference for YOLOv8 and Ultralytics python methods are here:
 - https://github.com/ultralytics/ultralytics
 - https://docs.ultralytics.com/reference/cfg/__init__/
 
-``` main_video.py``` is the starting file to use YOLO in inference to extract bounding boxes and detections of objects.
+` main_video.py` is the starting file to use YOLO in inference to extract bounding boxes and detections of objects. Should be run in the environment using _headless opencv_.
+Many other files illustrates how to use the functions. 
+
+No Keypoints extraction is provided, however [Centernet](https://github.com/xingyizhou/CenterNet) has been used and [HHP-Net](https://github.com/Malga-Vision/HHP-Net)
+is used and a running example can be found on Hugginface [demo](https://huggingface.co/spaces/FedeFT/Head_Pose_Estimation_and_LAEO_computation).
+
+To reproduce the output graph the file `main_cv2.py` should be used. As the name suggests, the environment with _regular opencv_
+should be used for plotting.
+
 
 pip install ultralytics -> version 8.2.31
 uninstall opencv-python

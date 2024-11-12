@@ -2,6 +2,7 @@
 from pathlib import Path
 
 import pandas as pd
+from ultralytics.utils import instance
 
 
 def extract_one_joint(data: pd.DataFrame, joint: str):
@@ -29,6 +30,34 @@ def extract_one_video(data: pd.DataFrame, instance: int):
         return ret
     else:
         return IndexError
+
+def extract_one_action_sample(person:int, action: str, trial:int,joint:str='rwrist'):
+    """
+
+        :param person: in [0, 15]
+        :param action: one out of ['drinking', 'eat_crisp', 'open_close_bottle', 'rubiks_cube', 'sanitise', 'touch_bottle',
+                   'touch_rubiks_cube',
+                   'transport_bottle', 'transport_pen', 'transport_rubiks_cube']
+        :param trial: 0 or 1
+        """
+    kpts_root_folder_data = Path('/home/federico/Data/Human_Motion')  # positions_3d_centered_shortened.csv
+    my_dataset = pd.read_csv(kpts_root_folder_data / 'positions_3d_reformat.csv', header=[0])
+    person = person
+    if person <0 or person > 15:
+        raise ValueError('person should be in [0, 15]')
+    action = action
+    actions = ['drinking', 'eat_crisp', 'open_close_bottle', 'rubiks_cube', 'sanitise', 'touch_bottle',
+               'touch_rubiks_cube',
+               'transport_bottle', 'transport_pen', 'transport_rubiks_cube']
+
+    if action.lower() not in actions:
+        raise ValueError(f'Action {action.lower()} not recognized')
+    trial = trial
+    temp_data = extract_one_joint(data=my_dataset, joint=joint)
+    temp_data= extract_one_person(data=temp_data, instance=person)
+    temp_data = extract_one_action(data=temp_data, action=action)
+    temp_data = extract_one_video(data=temp_data, instance=trial)
+    return return_only_data(temp_data)
 
 
 def return_only_data(data: pd.DataFrame):
